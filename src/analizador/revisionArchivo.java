@@ -20,6 +20,10 @@ public class revisionArchivo {
     
     public revisionArchivo(ArrayList<File> files) throws FileNotFoundException, IOException{
         
+        String paquete;
+        
+        int contadorLineas=0,contadorPermisos=0;
+        
         for(int i=0;i<files.size();i++){
             System.out.println(files.get(i).getName());
            
@@ -31,7 +35,39 @@ public class revisionArchivo {
 
                 while((cadena = b.readLine())!=null) {
 
-                    System.out.println(cadena);
+                    int encontrarNombrePaquete=cadena.indexOf("package=\"");
+                 
+                    if(encontrarNombrePaquete!=-1){
+                        
+                       paquete=cadena.substring(encontrarNombrePaquete+9);
+                       
+                       paquete=paquete.substring(0, paquete.indexOf("\""));
+                       System.out.println("Nombre del paquete =  "+paquete+"\n");
+                       
+                    }
+                    
+                    int encontrarPermisos=cadena.indexOf("uses-permission");
+                    
+                    if(encontrarPermisos>0){
+                        
+                        //System.out.println("holi");
+                  
+                        int encontrarNombrePermiso=cadena.indexOf("android:name=\"android.permission.");
+                        
+                        if(encontrarNombrePermiso>0){
+                            contadorLineas++;
+                            String name=cadena.substring(encontrarNombrePermiso+33,cadena.length()-3);
+                            
+                            
+                            System.out.println((contadorPermisos+1)+".- Nombre de permiso =  "+name+"\n");
+                            
+                            
+                            contadorPermisos++;
+                        }
+                        
+                        
+                    }
+                    
 
                 }
             
@@ -41,5 +77,7 @@ public class revisionArchivo {
         }
         
     }
+    
+
     
 }
