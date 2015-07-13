@@ -5,17 +5,31 @@
  */
 package analizador;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+
 /**
  *
  * @author Adrián
  */
 public class Analizador {
+    
+    
+    ArrayList permisos;
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public static void main(String[] args) throws FileNotFoundException, IOException {
+        
+        Archivos file = new Archivos();
+        
+        file.revisarPublicidad();
+        file.revisarPermisos();
+                
     }
     
 }

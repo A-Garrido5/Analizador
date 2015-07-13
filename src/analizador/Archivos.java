@@ -5,14 +5,52 @@
  */
 package analizador;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+
 /**
  *
  * @author Adrián
  */
 public class Archivos {
     
-    public void revisarPermisos(){
+    ArrayList permisos = new ArrayList();
+    ArrayList publicidad = new ArrayList();
+    
+    public void revisarPermisos() throws FileNotFoundException, IOException{
+        
+        FileReader archivo = new FileReader("Permisos.txt");
+        
+        BufferedReader lector = new BufferedReader(archivo);
+        
+        String linea;
+        
+        while ((linea = lector.readLine()) != null) {
+            
+            System.out.println(linea);
+            this.permisos.add(linea);
+        
+        }       
+        
         
     }
     
+    public void revisarPublicidad() throws FileNotFoundException, IOException{
+        
+        FileReader archivo = new FileReader("Publicidad.txt");
+        
+        BufferedReader lector = new BufferedReader(archivo);
+        
+        String linea;
+        
+        while ((linea = lector.readLine()) != null) {
+            
+            System.out.println(linea);
+            this.publicidad.add(linea);
+        
+        }       
+    }
 }
