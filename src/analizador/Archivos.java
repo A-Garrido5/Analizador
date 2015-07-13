@@ -6,6 +6,7 @@
 package analizador;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -20,6 +21,8 @@ public class Archivos {
     ArrayList permisos = new ArrayList();
     ArrayList publicidad = new ArrayList();
     
+    ArrayList <File> files = new ArrayList();
+    
     public void revisarPermisos() throws FileNotFoundException, IOException{
         
         FileReader archivo = new FileReader("Permisos.txt");
@@ -30,7 +33,7 @@ public class Archivos {
         
         while ((linea = lector.readLine()) != null) {
             
-            System.out.println(linea);
+            //System.out.println(linea);
             this.permisos.add(linea);
         
         }       
@@ -48,9 +51,16 @@ public class Archivos {
         
         while ((linea = lector.readLine()) != null) {
             
-            System.out.println(linea);
+            //System.out.println(linea);
             this.publicidad.add(linea);
+            
+           
+           
         
-        }       
+        }  
+        
+        DirectorioApp appInsegura = new DirectorioApp();
+           
+        files=appInsegura.revisarDirectorio();
     }
 }
