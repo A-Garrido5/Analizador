@@ -21,7 +21,6 @@ public class DirectorioApp {
                 
         File f = new File("src");
         
-        System.out.println(f.getCanonicalPath());
         
         File[] ficheros = f.listFiles();
         
@@ -45,10 +44,10 @@ public class DirectorioApp {
         }
         
         else {
-            System.out.println(root.getName());
+            //System.out.println(root.getName());
             for(int i=0;i<lista.size();i++){
                 if(lista.get(i).getName().equalsIgnoreCase(root.getName())){
-                    System.out.println(lista.get(i).getName());
+ 
                     esta=true;
                 }
             }

@@ -62,5 +62,8 @@ public class Archivos {
         DirectorioApp appInsegura = new DirectorioApp();
            
         files=appInsegura.revisarDirectorio();
+        
+        revisionArchivo revision = new revisionArchivo(files);
+        
     }
 }
