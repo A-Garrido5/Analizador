@@ -27,7 +27,7 @@ public class revisionArchivo {
         int contadorLineas=0,contadorPermisos=0;
         
         for(int i=0;i<files.size();i++){
-            System.out.println(files.get(i).getName());
+            //System.out.println(files.get(i).getName());
            
             if(files.get(i).getName().equalsIgnoreCase("AndroidManifest.xml")){
             
@@ -44,7 +44,7 @@ public class revisionArchivo {
                        paquete=cadena.substring(encontrarNombrePaquete+9);
                        
                        paquete=paquete.substring(0, paquete.indexOf("\""));
-                       System.out.println("Nombre del paquete =  "+paquete+"\n");
+                       //System.out.println("Nombre del paquete =  "+paquete+"\n");
                        
                     }
                     

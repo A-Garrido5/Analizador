@@ -28,7 +28,7 @@ public class Analizador {
         Archivos file = new Archivos();
         
         file.revisarPublicidad();
-        file.revisarPermisos();
+        
                 
     }
     

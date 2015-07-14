@@ -12,6 +12,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 /**
  *
@@ -19,15 +21,21 @@ import java.util.HashMap;
  */
 public class Archivos {
     
-    HashMap<String,Integer> permisosBuscados = new HashMap<String, Integer>();
+    HashMap permisosBuscados = new HashMap();
     
-    ArrayList publicidad = new ArrayList();
+    HashMap publicidadBuscada = new HashMap();
     
     ArrayList permisosObtenidos = new ArrayList();
     
     ArrayList <File> files = new ArrayList();
     
-    public void revisarPermisos() throws FileNotFoundException, IOException{
+    public Archivos() throws IOException{
+        
+        this.permisosBuscados = revisarPermisos();
+        this.publicidadBuscada =revisarPublicidad();
+    }
+    
+    public HashMap revisarPermisos() throws FileNotFoundException, IOException{
         
         FileReader archivo = new FileReader("Permisos.txt");
         
@@ -38,14 +46,17 @@ public class Archivos {
         while ((linea = lector.readLine()) != null) {
             
             //System.out.println(linea);
-            this.permisosBuscados.add(linea);
+            this.permisosBuscados.put(linea, 0);
+            //System.out.println(permisosBuscados.size());
         
         }       
         
         
+        
+        return permisosBuscados;
     }
     
-    public void revisarPublicidad() throws FileNotFoundException, IOException{
+    public HashMap revisarPublicidad() throws FileNotFoundException, IOException{
         
         FileReader archivo = new FileReader("Publicidad.txt");
         
@@ -56,13 +67,14 @@ public class Archivos {
         while ((linea = lector.readLine()) != null) {
             
             //System.out.println(linea);
-            this.publicidad.add(linea);
+            this.publicidadBuscada.put(linea,0);
             
            
            
         
         }  
         
+       
         DirectorioApp appInsegura = new DirectorioApp();
            
         files=appInsegura.revisarDirectorio();
@@ -74,8 +86,21 @@ public class Archivos {
         
         for(int i=0;i<permisosObtenidos.size();i++){
             
-            System.out.println(permisosObtenidos.get(i));
+            //System.out.println(permisosObtenidos.get(i));
         }
         
+        Iterator it = this.permisosBuscados.entrySet().iterator();
+
+        while (it.hasNext()) {
+            Map.Entry e = (Map.Entry)it.next();
+            System.out.println(e.getKey() + " " + e.getValue());
+        }
+        
+        
+        return publicidadBuscada;
+        
+        
     }
+
+    
 }
