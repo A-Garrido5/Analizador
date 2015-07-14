@@ -40,7 +40,9 @@ public class Archivos {
         
         revisionArchivo revision = new revisionArchivo();
         
-        permisosObtenidos=revision.revisar(files);
+        permisosObtenidos=revision.revisarPermisos(files);
+        
+        publicidadBuscada=revision.revisarPublicidad(publicidadBuscada,files);
         
         
         for(int i=0;i<permisosObtenidos.size();i++){
@@ -49,6 +51,8 @@ public class Archivos {
                 permisosBuscados.replace(permisosObtenidos.get(i),true);
             }
         }
+        
+        
         
         
 
@@ -87,7 +91,9 @@ public class Archivos {
         while ((linea = lector.readLine()) != null) {
             
             //System.out.println(linea);
-            this.publicidadBuscada.put(linea,0);
+            this.publicidadBuscada.put(linea,false);
+            
+            
             
            
            
@@ -98,7 +104,7 @@ public class Archivos {
 
         while (it.hasNext()) {
             Map.Entry e = (Map.Entry)it.next();
-            System.out.println(e.getKey() + " " + e.getValue());
+            System.out.println(e.getKey() + "             " + e.getValue());
         }
         
        
