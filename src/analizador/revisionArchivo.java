@@ -18,7 +18,9 @@ import java.util.ArrayList;
  */
 public class revisionArchivo {
     
-    public revisionArchivo(ArrayList<File> files) throws FileNotFoundException, IOException{
+    public ArrayList<String> revisar(ArrayList<File> files) throws FileNotFoundException, IOException{
+        
+        ArrayList <String> nombresPermisos = new ArrayList();
         
         String paquete;
         
@@ -50,8 +52,7 @@ public class revisionArchivo {
                     
                     if(encontrarPermisos>0){
                         
-                        //System.out.println("holi");
-                  
+                                       
                         int encontrarNombrePermiso=cadena.indexOf("android:name=\"android.permission.");
                         
                         if(encontrarNombrePermiso>0){
@@ -59,8 +60,17 @@ public class revisionArchivo {
                             String name=cadena.substring(encontrarNombrePermiso+33,cadena.length()-3);
                             
                             
-                            System.out.println((contadorPermisos+1)+".- Nombre de permiso =  "+name+"\n");
                             
+                            if(name.indexOf("android:permissionGroup")>0){
+                                
+                                
+                                
+                            }
+                            
+                            else{
+                                nombresPermisos.add(name);
+                                // System.out.println((contadorPermisos+1)+".- Nombre de permiso =  "+name+"\n");
+                            }
                             
                             contadorPermisos++;
                         }
@@ -75,6 +85,8 @@ public class revisionArchivo {
                  
                     
         }
+        
+        return nombresPermisos;
         
     }
     

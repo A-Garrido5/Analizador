@@ -11,6 +11,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  *
@@ -18,8 +19,11 @@ import java.util.ArrayList;
  */
 public class Archivos {
     
-    ArrayList permisos = new ArrayList();
+    HashMap<String,Integer> permisosBuscados = new HashMap<String, Integer>();
+    
     ArrayList publicidad = new ArrayList();
+    
+    ArrayList permisosObtenidos = new ArrayList();
     
     ArrayList <File> files = new ArrayList();
     
@@ -34,7 +38,7 @@ public class Archivos {
         while ((linea = lector.readLine()) != null) {
             
             //System.out.println(linea);
-            this.permisos.add(linea);
+            this.permisosBuscados.add(linea);
         
         }       
         
@@ -63,7 +67,15 @@ public class Archivos {
            
         files=appInsegura.revisarDirectorio();
         
-        revisionArchivo revision = new revisionArchivo(files);
+        revisionArchivo revision = new revisionArchivo();
+        
+        permisosObtenidos=revision.revisar(files);
+        
+        
+        for(int i=0;i<permisosObtenidos.size();i++){
+            
+            System.out.println(permisosObtenidos.get(i));
+        }
         
     }
 }
