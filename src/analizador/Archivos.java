@@ -52,12 +52,7 @@ public class Archivos {
         
         
 
-//        Iterator it = this.permisosBuscados.entrySet().iterator();
-//
-//        while (it.hasNext()) {
-//            Map.Entry e = (Map.Entry)it.next();
-//            System.out.println(e.getKey() + " " + e.getValue());
-//        }
+//        
     }
     
     public HashMap revisarPermisos() throws FileNotFoundException, IOException{
@@ -97,7 +92,14 @@ public class Archivos {
            
            
         
-        }  
+        } 
+        
+        Iterator it = this.publicidadBuscada.entrySet().iterator();
+
+        while (it.hasNext()) {
+            Map.Entry e = (Map.Entry)it.next();
+            System.out.println(e.getKey() + " " + e.getValue());
+        }
         
        
         
