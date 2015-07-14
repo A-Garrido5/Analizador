@@ -33,6 +33,31 @@ public class Archivos {
         
         this.permisosBuscados = revisarPermisos();
         this.publicidadBuscada =revisarPublicidad();
+        
+        DirectorioApp appInsegura = new DirectorioApp();
+           
+        files=appInsegura.revisarDirectorio();
+        
+        revisionArchivo revision = new revisionArchivo();
+        
+        permisosObtenidos=revision.revisar(files);
+        
+        
+        for(int i=0;i<permisosObtenidos.size();i++){
+            
+            if(permisosBuscados.containsKey(permisosObtenidos.get(i))){
+                permisosBuscados.replace(permisosObtenidos.get(i),true);
+            }
+        }
+        
+        
+
+//        Iterator it = this.permisosBuscados.entrySet().iterator();
+//
+//        while (it.hasNext()) {
+//            Map.Entry e = (Map.Entry)it.next();
+//            System.out.println(e.getKey() + " " + e.getValue());
+//        }
     }
     
     public HashMap revisarPermisos() throws FileNotFoundException, IOException{
@@ -46,7 +71,7 @@ public class Archivos {
         while ((linea = lector.readLine()) != null) {
             
             //System.out.println(linea);
-            this.permisosBuscados.put(linea, 0);
+            this.permisosBuscados.put(linea, false);
             //System.out.println(permisosBuscados.size());
         
         }       
@@ -75,26 +100,8 @@ public class Archivos {
         }  
         
        
-        DirectorioApp appInsegura = new DirectorioApp();
-           
-        files=appInsegura.revisarDirectorio();
-        
-        revisionArchivo revision = new revisionArchivo();
-        
-        permisosObtenidos=revision.revisar(files);
         
         
-        for(int i=0;i<permisosObtenidos.size();i++){
-            
-            //System.out.println(permisosObtenidos.get(i));
-        }
-        
-        Iterator it = this.permisosBuscados.entrySet().iterator();
-
-        while (it.hasNext()) {
-            Map.Entry e = (Map.Entry)it.next();
-            System.out.println(e.getKey() + " " + e.getValue());
-        }
         
         
         return publicidadBuscada;

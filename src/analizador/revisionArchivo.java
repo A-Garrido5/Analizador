@@ -82,7 +82,22 @@ public class revisionArchivo {
                 }
             
             }
+            
+            else{
+                
+                String cadena;
+                FileReader n = new FileReader(files.get(i).getAbsoluteFile());
+                BufferedReader b = new BufferedReader(n);
+
+                while((cadena = b.readLine())!=null) {
+                    if(cadena.contains("adMob")){
+                        System.out.println(cadena);
+                    }
+                }
+                
+            }
                  
+            
                     
         }
         
