@@ -5,7 +5,9 @@
  */
 package analizador;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -19,11 +21,9 @@ public class DirectorioApp {
     public ArrayList revisarDirectorio() throws IOException{
         
                 
-        File f = new File("src");
-        
-        
-        File[] ficheros = f.listFiles();
-        
+        String sDirectorio = "c:\\users\\Adrián\\Desktop\\AppsInseguras";
+        File f = new File(sDirectorio);
+               
         javarchivos=searchForDatFiles(f,javarchivos);
         
         return javarchivos;
@@ -37,14 +37,12 @@ public class DirectorioApp {
     
         if(root.isDirectory())
         {
-            
-
             for(File file : root.listFiles())
                 searchForDatFiles(file,lista);
         }
         
         else {
-            //System.out.println(root.getName());
+            //System.out.println(root.getAbsolutePath());
             for(int i=0;i<lista.size();i++){
                 if(lista.get(i).getName().equalsIgnoreCase(root.getName())){
  

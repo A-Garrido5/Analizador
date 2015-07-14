@@ -104,7 +104,7 @@ public class Archivos {
 
         while (it.hasNext()) {
             Map.Entry e = (Map.Entry)it.next();
-            System.out.println(e.getKey() + "             " + e.getValue());
+            //System.out.println(e.getKey() + "             " + e.getValue());
         }
         
        

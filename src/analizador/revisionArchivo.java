@@ -23,6 +23,10 @@ public class revisionArchivo {
     
     public ArrayList<String> revisarPermisos(ArrayList<File> files) throws FileNotFoundException, IOException{
         
+        
+        
+        
+        
         ArrayList <String> nombresPermisos = new ArrayList();
         
         String paquete;
@@ -122,7 +126,7 @@ public class revisionArchivo {
 
                 }
                 
-                //System.out.println(e.getKey() + " " + e.getValue());
+                System.out.println(e.getKey() + " " + e.getValue());
             }
             
         
