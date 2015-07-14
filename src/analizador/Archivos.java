@@ -19,7 +19,7 @@ import java.util.Map;
  *
  * @author Adrián
  */
-public class Archivos {
+public class Archivos extends Thread {
     
     HashMap permisosBuscados = new HashMap();
     
