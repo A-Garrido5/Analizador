@@ -110,21 +110,7 @@ public class revisionArchivo {
             while (it.hasNext()) {
                 Map.Entry e = (Map.Entry)it.next();
                 
-                for(int j=0;j<files.size();j++){
-
-                    String cadena;
-                    FileReader n = new FileReader(files.get(j).getAbsoluteFile());
-                    BufferedReader b = new BufferedReader(n);
-
-                    while((cadena = b.readLine())!=null) {
-
-                        if(cadena.contains(e.getKey().toString())){
-                            publicidadBuscada.replace(e.getKey(), true);
-                        }
-
-                    }
-
-                }
+                
                 
                 System.out.println(e.getKey() + " " + e.getValue());
             }
@@ -133,6 +119,9 @@ public class revisionArchivo {
         
         return publicidadBuscada;
     }
+    
+    
+    
     
 
     
