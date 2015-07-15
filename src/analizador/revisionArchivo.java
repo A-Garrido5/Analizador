@@ -23,13 +23,9 @@ public class revisionArchivo {
     
     public ArrayList<String> revisarPermisos(ArrayList<File> files) throws FileNotFoundException, IOException{
         
-        
-        
-        
-        
         ArrayList <String> nombresPermisos = new ArrayList();
         
-        String paquete;
+        String paquete,version;
         
         int contadorLineas=0,contadorPermisos=0;
         
@@ -45,14 +41,24 @@ public class revisionArchivo {
                 while((cadena = b.readLine())!=null) {
 
                     int encontrarNombrePaquete=cadena.indexOf("package=\"");
+                    int encontrarVersion=cadena.indexOf("VersionName=\"");
                  
                     if(encontrarNombrePaquete!=-1){
                         
                        paquete=cadena.substring(encontrarNombrePaquete+9);
                        
                        paquete=paquete.substring(0, paquete.indexOf("\""));
-                       //System.out.println("Nombre del paquete =  "+paquete+"\n");
+                       System.out.println("Nombre del paquete =  "+paquete+"\n");
                        
+                    }
+                    
+                    if(encontrarVersion>0){
+                        
+                       version=cadena.substring(encontrarVersion+13);
+                       
+                       version=version.substring(0, version.indexOf("\""));
+                       System.out.println("Versión =  "+version+"\n");
+                        
                     }
                     
                     int encontrarPermisos=cadena.indexOf("uses-permission");
@@ -110,9 +116,12 @@ public class revisionArchivo {
             while (it.hasNext()) {
                 Map.Entry e = (Map.Entry)it.next();
                 
+                new Hebras(e.getKey().toString(),files).start();
                 
                 
-                System.out.println(e.getKey() + " " + e.getValue());
+                
+                
+                //System.out.println(e.getKey() + " " + e.getValue());
             }
             
         

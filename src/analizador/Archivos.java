@@ -53,8 +53,12 @@ public class Archivos extends Thread {
         }
         
         
-        
-        
+        Iterator it = this.permisosBuscados.entrySet().iterator();
+
+        while (it.hasNext()) {
+            Map.Entry e = (Map.Entry)it.next();
+            System.out.println(e.getKey() + "             " + e.getValue());
+        }
 
 //        
     }
