@@ -1,0 +1,143 @@
+% Nombre del paquete:  com.instagram.android
+
+% Version:  5.0-1521886
+
+
+
+@RELATION  ads libraries
+
+@ATTRIBUTE com.zestadz  {true,false}
+@ATTRIBUTE com.madhouse  {true,false}
+@ATTRIBUTE com.jirbo.adcolony  {true,false}
+@ATTRIBUTE mobi.vserv  {true,false}
+@ATTRIBUTE net.metaps  {true,false}
+@ATTRIBUTE com.noqoush.adfalcon  {true,false}
+@ATTRIBUTE com.sellaring  {true,false}
+@ATTRIBUTE com.nexage  {true,false}
+@ATTRIBUTE com.sponsorpay  {true,false}
+@ATTRIBUTE com.adsmogo  {true,false}
+@ATTRIBUTE net.youmi  {true,false}
+@ATTRIBUTE com.medialets  {true,false}
+@ATTRIBUTE com.mobclix  {true,false}
+@ATTRIBUTE com.tapjoy  {true,false}
+@ATTRIBUTE mediba.ad  {true,false}
+@ATTRIBUTE com.admarvel  {true,false}
+@ATTRIBUTE com.mt.airad  {true,false}
+@ATTRIBUTE com.vdopia  {true,false}
+@ATTRIBUTE com.adwo  {true,false}
+@ATTRIBUTE com.google.analytics  {true,false}
+@ATTRIBUTE de.madvertise  {true,false}
+@ATTRIBUTE com.inmobi  {true,false}
+@ATTRIBUTE com.startapp  {true,false}
+@ATTRIBUTE com.revmob  {true,false}
+@ATTRIBUTE com.greystripe  {true,false}
+@ATTRIBUTE com.mobosquare  {true,false}
+@ATTRIBUTE com.airpush  {true,false}
+@ATTRIBUTE com.waps  {true,false}
+@ATTRIBUTE com.google.ads  {true,false}
+@ATTRIBUTE com.cauly  {true,false}
+@ATTRIBUTE net.daum  {true,false}
+@ATTRIBUTE com.applovin  {true,false}
+@ATTRIBUTE com.mopub  {true,false}
+@ATTRIBUTE com.adknowledge  {true,false}
+@ATTRIBUTE com.smaato  {true,false}
+@ATTRIBUTE buzzcity  {true,false}
+@ATTRIBUTE com.mobfox  {true,false}
+@ATTRIBUTE com.vpon  {true,false}
+@ATTRIBUTE com.tapfortap  {true,false}
+@ATTRIBUTE com.adwhirl  {true,false}
+@ATTRIBUTE com.admoda  {true,false}
+@ATTRIBUTE com.getjar  {true,false}
+@ATTRIBUTE com.mdotm  {true,false}
+@ATTRIBUTE com.papaya  {true,false}
+@ATTRIBUTE com.wiyun  {true,false}
+@ATTRIBUTE com.quclix  {true,false}
+@ATTRIBUTE com.tapit  {true,false}
+@ATTRIBUTE com.kuguo  {true,false}
+@ATTRIBUTE com.moolah  {true,false}
+@ATTRIBUTE com.jumptap  {true,false}
+@ATTRIBUTE com.ldevelop  {true,false}
+@ATTRIBUTE cn.domob  {true,false}
+@ATTRIBUTE com.mobpartner  {true,false}
+@ATTRIBUTE com.inneractive  {true,false}
+@ATTRIBUTE com.senddroid  {true,false}
+@ATTRIBUTE com.rhythmnewmedia  {true,false}
+@ATTRIBUTE com.everbadge  {true,false}
+@ATTRIBUTE com.burstly  {true,false}
+@ATTRIBUTE com.huntmads  {true,false}
+@ATTRIBUTE com.wooboo  {true,false}
+@ATTRIBUTE com.appbrain  {true,false}
+@ATTRIBUTE com.chartboost  {true,false}
+@ATTRIBUTE com.admob  {true,false}
+@ATTRIBUTE com.adfonic  {true,false}
+@ATTRIBUTE com.pontiflex  {true,false}
+@ATTRIBUTE com.flurry  {true,false}
+
+@data
+
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false

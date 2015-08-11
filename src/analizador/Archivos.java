@@ -66,10 +66,12 @@ public class Archivos extends Thread {
         }
         
         
-        Escritura write = new Escritura(permisosBuscados,publicidadBuscada,this.nombrePaquete,this.version);
+        Escritura write = new Escritura();
+        write.EscrituraPermisos(permisosBuscados,this.nombrePaquete,this.version);
+        write.EscrituraPublicidad(publicidadBuscada, this.nombrePaquete, this.version);
         
 
-//        
+        
     }
     
     public HashMap revisarPermisos() throws FileNotFoundException, IOException{

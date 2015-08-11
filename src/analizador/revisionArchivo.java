@@ -123,7 +123,7 @@ public class revisionArchivo {
                 
                 
                 
-                //System.out.println(e.getKey() + " " + e.getValue());
+                System.out.println(e.getKey() + " " + e.getValue());
             }
             
         

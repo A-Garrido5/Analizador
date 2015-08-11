@@ -18,13 +18,13 @@ import java.util.Map;
  */
 public class Escritura {
     
-    public Escritura(HashMap permisosBuscados, HashMap publicidadBuscada, String paquete, String version){
+    public void EscrituraPermisos(HashMap permisosBuscados, String paquete, String version){
         
         FileWriter fichero = null;
         PrintWriter pw = null;
         try
         {
-            fichero = new FileWriter("Output.txt");
+            fichero = new FileWriter("Output_Permisos.txt");
             pw = new PrintWriter(fichero);
             
             pw.println("% Nombre del paquete:  "+paquete);
@@ -78,5 +78,67 @@ public class Escritura {
         }
         
     }
+    
+    public void EscrituraPublicidad(HashMap publicidadBuscada, String paquete, String version){
+        
+        FileWriter fichero = null;
+        PrintWriter pw = null;
+        try
+        {
+            fichero = new FileWriter("Output_Publicidad.txt");
+            pw = new PrintWriter(fichero);
+            
+            pw.println("% Nombre del paquete:  "+paquete);
+            pw.println();
+            
+            pw.println("% Version:  "+version);
+            pw.println();
+            pw.println();
+            pw.println();
+            
+            pw.print("@RELATION  ads libraries");
+            pw.println();
+            pw.println();
+             
+                       
+            Iterator it = publicidadBuscada.entrySet().iterator();
+
+            while (it.hasNext()) {
+                Map.Entry e = (Map.Entry)it.next();
+                
+                pw.println("@ATTRIBUTE "+e.getKey()+"  {true,false}");
+                //pw.println(e.getKey() + "             " + e.getValue());
+            }
+            
+            pw.println();
+            
+            pw.println("@data");
+            
+            pw.println();
+            
+            Iterator ite = publicidadBuscada.entrySet().iterator();
+
+            while (ite.hasNext()) {
+                Map.Entry r = (Map.Entry)ite.next();
+                
+                pw.println(r.getValue());
+                //pw.println(e.getKey() + "             " + e.getValue());
+            }
+ 
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+           try {
+           // Nuevamente aprovechamos el finally para 
+           // asegurarnos que se cierra el fichero.
+           if (null != fichero)
+              fichero.close();
+           } catch (Exception e2) {
+              e2.printStackTrace();
+           }
+        }
+        
+    }
+    
     
 }

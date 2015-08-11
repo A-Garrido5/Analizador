@@ -54,7 +54,7 @@ public class Hebras extends Thread{
                             this.presencia=true;
                         }
                         
-                        //System.out.println(e.getKey() + " " + e.getValue());
+                        
                     }  
                 } 
                 
