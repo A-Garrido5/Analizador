@@ -63,7 +63,7 @@ public class Hebras extends Thread{
                 }
             
         }
-            System.out.println(getName()+"    "+presencia);
+            //System.out.println(getName()+"    "+presencia);
     }
     
     

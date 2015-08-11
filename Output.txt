@@ -1,0 +1,315 @@
+% Nombre del paquete:  com.instagram.android
+
+% Version:  5.0-1521886
+
+
+
+@RELATION  Permissions
+
+@ATTRIBUTE DIAGNOSTIC  {true,false}
+@ATTRIBUTE SET_WALLPAPER_HINTS  {true,false}
+@ATTRIBUTE BIND_REMOTEVIEWS  {true,false}
+@ATTRIBUTE FACTORY_TEST  {true,false}
+@ATTRIBUTE GLOBAL_SEARCH  {true,false}
+@ATTRIBUTE PERSISTENT_ACTIVITY  {true,false}
+@ATTRIBUTE WRITE_HISTORY_BOOKMARKS  {true,false}
+@ATTRIBUTE READ_CALL_LOG  {true,false}
+@ATTRIBUTE READ_CALENDAR  {true,false}
+@ATTRIBUTE WRITE_PROFILE  {true,false}
+@ATTRIBUTE READ_SMS  {true,false}
+@ATTRIBUTE DEVICE_POWER  {true,false}
+@ATTRIBUTE SEND_SMS  {true,false}
+@ATTRIBUTE WAKE_LOCK  {true,false}
+@ATTRIBUTE SUBSCRIBED_FEEDS_READ  {true,false}
+@ATTRIBUTE BIND_NFC_SERVICE  {true,false}
+@ATTRIBUTE READ_HISTORY_BOOKMARKS  {true,false}
+@ATTRIBUTE BIND_ACCESSIBILITY_SERVICE  {true,false}
+@ATTRIBUTE GET_PACKAGE_SIZE  {true,false}
+@ATTRIBUTE BIND_CARRIER_MESSAGING_SERVICE  {true,false}
+@ATTRIBUTE WRITE_EXTERNAL_STORAGE  {true,false}
+@ATTRIBUTE CAMERA  {true,false}
+@ATTRIBUTE RECEIVE_WAP_PUSH  {true,false}
+@ATTRIBUTE BLUETOOTH_ADMIN  {true,false}
+@ATTRIBUTE BODY_SENSORS  {true,false}
+@ATTRIBUTE RECEIVE_MMS  {true,false}
+@ATTRIBUTE SET_ANIMATION_SCALE  {true,false}
+@ATTRIBUTE MASTER_CLEAR  {true,false}
+@ATTRIBUTE GET_TASKS  {true,false}
+@ATTRIBUTE RESTART_PACKAGES  {true,false}
+@ATTRIBUTE BIND_NOTIFICATION_LISTENER_SERVICE  {true,false}
+@ATTRIBUTE SET_DEBUG_APP  {true,false}
+@ATTRIBUTE BIND_VOICE_INTERACTION  {true,false}
+@ATTRIBUTE BROADCAST_WAP_PUSH  {true,false}
+@ATTRIBUTE BIND_TEXT_SERVICE  {true,false}
+@ATTRIBUTE CHANGE_COMPONENT_ENABLED_STATE  {true,false}
+@ATTRIBUTE FLASHLIGHT  {true,false}
+@ATTRIBUTE MODIFY_PHONE_STATE  {true,false}
+@ATTRIBUTE DELETE_CACHE_FILES  {true,false}
+@ATTRIBUTE RECORD_AUDIO  {true,false}
+@ATTRIBUTE ACCESS_FINE_LOCATION  {true,false}
+@ATTRIBUTE INSTALL_SHORTCUT  {true,false}
+@ATTRIBUTE ADD_VOICEMAIL  {true,false}
+@ATTRIBUTE CALL_PHONE  {true,false}
+@ATTRIBUTE SIGNAL_PERSISTENT_PROCESSES  {true,false}
+@ATTRIBUTE SET_PREFERRED_APPLICATIONS  {true,false}
+@ATTRIBUTE BIND_DEVICE_ADMIN  {true,false}
+@ATTRIBUTE REORDER_TASKS  {true,false}
+@ATTRIBUTE MODIFY_AUDIO_SETTINGS  {true,false}
+@ATTRIBUTE SET_TIME  {true,false}
+@ATTRIBUTE GET_ACCOUNTS  {true,false}
+@ATTRIBUTE EXPAND_STATUS_BAR  {true,false}
+@ATTRIBUTE READ_EXTERNAL_STORAGE  {true,false}
+@ATTRIBUTE SYSTEM_ALERT_WINDOW  {true,false}
+@ATTRIBUTE DISABLE_KEYGUARD  {true,false}
+@ATTRIBUTE SET_ORIENTATION  {true,false}
+@ATTRIBUTE ACCESS_SURFACE_FLINGER  {true,false}
+@ATTRIBUTE CHANGE_CONFIGURATION  {true,false}
+@ATTRIBUTE SET_ALWAYS_FINISH  {true,false}
+@ATTRIBUTE ACCESS_COARSE_LOCATION  {true,false}
+@ATTRIBUTE FORCE_BACK  {true,false}
+@ATTRIBUTE READ_INPUT_STATE  {true,false}
+@ATTRIBUTE BROADCAST_STICKY  {true,false}
+@ATTRIBUTE DELETE_PACKAGES  {true,false}
+@ATTRIBUTE ACCESS_MOCK_LOCATION  {true,false}
+@ATTRIBUTE READ_CONTACTS  {true,false}
+@ATTRIBUTE BROADCAST_SMS  {true,false}
+@ATTRIBUTE REBOOT  {true,false}
+@ATTRIBUTE ACCESS_WIFI_STATE  {true,false}
+@ATTRIBUTE UPDATE_DEVICE_STATS  {true,false}
+@ATTRIBUTE MEDIA_CONTENT_CONTROL  {true,false}
+@ATTRIBUTE SET_WALLPAPER  {true,false}
+@ATTRIBUTE USE_CREDENTIALS  {true,false}
+@ATTRIBUTE NFC  {true,false}
+@ATTRIBUTE READ_SYNC_STATS  {true,false}
+@ATTRIBUTE READ_SYNC_SETTINGS  {true,false}
+@ATTRIBUTE SET_POINTER_SPEED  {true,false}
+@ATTRIBUTE CAPTURE_AUDIO_OUTPUT  {true,false}
+@ATTRIBUTE HARDWARE_TEST  {true,false}
+@ATTRIBUTE INTERNAL_SYSTEM_WINDOW  {true,false}
+@ATTRIBUTE BLUETOOTH_PRIVILEGED  {true,false}
+@ATTRIBUTE BIND_VPN_SERVICE  {true,false}
+@ATTRIBUTE WRITE_USER_DICTIONARY  {true,false}
+@ATTRIBUTE READ_USER_DICTIONARY  {true,false}
+@ATTRIBUTE SET_TIME_ZONE  {true,false}
+@ATTRIBUTE WRITE_SECURE_SETTINGS  {true,false}
+@ATTRIBUTE WRITE_SOCIAL_STREAM  {true,false}
+@ATTRIBUTE ACCOUNT_MANAGER  {true,false}
+@ATTRIBUTE WRITE_APN_SETTINGS  {true,false}
+@ATTRIBUTE BROADCAST_PACKAGE_REMOVED  {true,false}
+@ATTRIBUTE CAPTURE_VIDEO_OUTPUT  {true,false}
+@ATTRIBUTE READ_PROFILE  {true,false}
+@ATTRIBUTE MOUNT_UNMOUNT_FILESYSTEMS  {true,false}
+@ATTRIBUTE BIND_INPUT_METHOD  {true,false}
+@ATTRIBUTE CLEAR_APP_USER_DATA  {true,false}
+@ATTRIBUTE INSTALL_LOCATION_PROVIDER  {true,false}
+@ATTRIBUTE READ_PHONE_STATE  {true,false}
+@ATTRIBUTE SET_ALARM  {true,false}
+@ATTRIBUTE PROCESS_OUTGOING_CALLS  {true,false}
+@ATTRIBUTE SET_PROCESS_LIMIT  {true,false}
+@ATTRIBUTE CAPTURE_SECURE_VIDEO_OUTPUT  {true,false}
+@ATTRIBUTE SUBSCRIBED_FEEDS_WRITE  {true,false}
+@ATTRIBUTE MANAGE_ACCOUNTS  {true,false}
+@ATTRIBUTE RECEIVE_SMS  {true,false}
+@ATTRIBUTE READ_VOICEMAIL  {true,false}
+@ATTRIBUTE INJECT_EVENTS  {true,false}
+@ATTRIBUTE MANAGE_APP_TOKENS  {true,false}
+@ATTRIBUTE WRITE_SETTINGS  {true,false}
+@ATTRIBUTE READ_LOGS  {true,false}
+@ATTRIBUTE INSTALL_PACKAGES  {true,false}
+@ATTRIBUTE CONTROL_LOCATION_UPDATES  {true,false}
+@ATTRIBUTE WRITE_VOICEMAIL  {true,false}
+@ATTRIBUTE BIND_WALLPAPER  {true,false}
+@ATTRIBUTE AUTHENTICATE_ACCOUNTS  {true,false}
+@ATTRIBUTE ACCESS_NETWORK_STATE  {true,false}
+@ATTRIBUTE MANAGE_DOCUMENTS  {true,false}
+@ATTRIBUTE DUMP  {true,false}
+@ATTRIBUTE BATTERY_STATS  {true,false}
+@ATTRIBUTE CHANGE_WIFI_STATE  {true,false}
+@ATTRIBUTE WRITE_SYNC_SETTINGS  {true,false}
+@ATTRIBUTE CALL_PRIVILEGED  {true,false}
+@ATTRIBUTE WRITE_GSERVICES  {true,false}
+@ATTRIBUTE UNINSTALL_SHORTCUT  {true,false}
+@ATTRIBUTE TRANSMIT_IR  {true,false}
+@ATTRIBUTE ACCESS_CHECKIN_PROPERTIES  {true,false}
+@ATTRIBUTE CLEAR_APP_CACHE  {true,false}
+@ATTRIBUTE WRITE_CONTACTS  {true,false}
+@ATTRIBUTE MOUNT_FORMAT_FILESYSTEMS  {true,false}
+@ATTRIBUTE SEND_RESPOND_VIA_MESSAGE  {true,false}
+@ATTRIBUTE WRITE_SMS  {true,false}
+@ATTRIBUTE READ_FRAME_BUFFER  {true,false}
+@ATTRIBUTE STATUS_BAR  {true,false}
+@ATTRIBUTE INTERNET  {true,false}
+@ATTRIBUTE READ_SOCIAL_STREAM  {true,false}
+@ATTRIBUTE GET_TOP_ACTIVITY_INFO  {true,false}
+@ATTRIBUTE ACCESS_LOCATION_EXTRA_COMMANDS  {true,false}
+@ATTRIBUTE RECEIVE_BOOT_COMPLETED  {true,false}
+@ATTRIBUTE BRICK  {true,false}
+@ATTRIBUTE WRITE_CALL_LOG  {true,false}
+@ATTRIBUTE BIND_TV_INPUT  {true,false}
+@ATTRIBUTE SET_ACTIVITY_WATCHER  {true,false}
+@ATTRIBUTE USE_SIP  {true,false}
+@ATTRIBUTE BIND_DREAM_SERVICE  {true,false}
+@ATTRIBUTE KILL_BACKGROUND_PROCESSES  {true,false}
+@ATTRIBUTE BIND_APPWIDGET  {true,false}
+@ATTRIBUTE BIND_PRINT_SERVICE  {true,false}
+@ATTRIBUTE LOCATION_HARDWARE  {true,false}
+@ATTRIBUTE BLUETOOTH  {true,false}
+@ATTRIBUTE CHANGE_NETWORK_STATE  {true,false}
+@ATTRIBUTE CHANGE_WIFI_MULTICAST_STATE  {true,false}
+@ATTRIBUTE VIBRATE  {true,false}
+@ATTRIBUTE WRITE_CALENDAR  {true,false}
+
+@data
+
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+true
+false
+false
+false
+false
+false
+false
+true
+true
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+true
+true
+false
+false
+false
+false
+false
+false
+false
+false
+false
+true
+false
+false
+false
+false
+true
+false
+false
+false
+false
+false
+false
+false
+false
+false
+true
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+true
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+true
+false
+false
+true
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+true
+false
+true
+false
+false
+false
+true
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false
+false

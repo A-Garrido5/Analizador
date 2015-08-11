@@ -21,11 +21,13 @@ import java.util.Map;
  */
 public class revisionArchivo {
     
+    String paquete,version;
+    
     public ArrayList<String> revisarPermisos(ArrayList<File> files) throws FileNotFoundException, IOException{
         
         ArrayList <String> nombresPermisos = new ArrayList();
         
-        String paquete,version;
+        
         
         int contadorLineas=0,contadorPermisos=0;
         
@@ -45,19 +47,19 @@ public class revisionArchivo {
                  
                     if(encontrarNombrePaquete!=-1){
                         
-                       paquete=cadena.substring(encontrarNombrePaquete+9);
+                       this.paquete=cadena.substring(encontrarNombrePaquete+9);
                        
-                       paquete=paquete.substring(0, paquete.indexOf("\""));
-                       System.out.println("Nombre del paquete =  "+paquete+"\n");
+                       this.paquete=this.paquete.substring(0, this.paquete.indexOf("\""));
+                       //System.out.println("Nombre del paquete =  "+paquete+"\n");
                        
                     }
                     
                     if(encontrarVersion>0){
                         
-                       version=cadena.substring(encontrarVersion+13);
+                       this.version=cadena.substring(encontrarVersion+13);
                        
-                       version=version.substring(0, version.indexOf("\""));
-                       System.out.println("Versión =  "+version+"\n");
+                       this.version=this.version.substring(0, this.version.indexOf("\""));
+//                       System.out.println("Versión =  "+this.version+"\n");
                         
                     }
                     
@@ -129,7 +131,13 @@ public class revisionArchivo {
         return publicidadBuscada;
     }
     
+    String getPackage(){
+        return this.paquete;
+    }
     
+    String getVersion(){
+        return this.version;
+    }
     
     
 

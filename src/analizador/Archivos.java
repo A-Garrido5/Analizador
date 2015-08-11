@@ -29,6 +29,8 @@ public class Archivos extends Thread {
     
     ArrayList <File> files = new ArrayList();
     
+    String nombrePaquete,version;
+    
     public Archivos() throws IOException{
         
         this.permisosBuscados = revisarPermisos();
@@ -44,6 +46,9 @@ public class Archivos extends Thread {
         
         publicidadBuscada=revision.revisarPublicidad(publicidadBuscada,files);
         
+        this.nombrePaquete=revision.getPackage();
+        this.version=revision.getVersion();
+        
         
         for(int i=0;i<permisosObtenidos.size();i++){
             
@@ -57,8 +62,12 @@ public class Archivos extends Thread {
 
         while (it.hasNext()) {
             Map.Entry e = (Map.Entry)it.next();
-            System.out.println(e.getKey() + "             " + e.getValue());
+            //System.out.println(e.getKey() + "             " + e.getValue());
         }
+        
+        
+        Escritura write = new Escritura(permisosBuscados,publicidadBuscada,this.nombrePaquete,this.version);
+        
 
 //        
     }
